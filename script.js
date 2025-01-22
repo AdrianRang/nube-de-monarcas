@@ -17,10 +17,12 @@ function message(obj) {
     let mes = obj.message
     const new_mes = document.getElementById("conversation").appendChild(document.createElement("div"));
     new_mes.classList.add("full-message")
-    let hear;
-    hear = document.createElement("img")
+    let sbutton = document.createElement("button");
+    sbutton.classList.add("s-button")
+    let hear = document.createElement("img")
     hear.src = sound_icon;
     hear.classList.add("sound")
+    sbutton.appendChild(hear);
     const img = document.createElement("img")
     img.src = machine_profile
     img.className = "profile"
@@ -30,7 +32,7 @@ function message(obj) {
 
     new_mes.appendChild(img)
     new_mes.appendChild(new_message)
-    new_mes.appendChild(hear)
+    new_mes.appendChild(sbutton)
 
     let options = obj.responses;
     console.log("options: " + options)
@@ -45,6 +47,11 @@ function message(obj) {
         document.getElementById("response").appendChild(button)
     });
     document.getElementById("response").scrollIntoView();
+
+    sbutton.addEventListener("click", () => {
+        let audio = new Audio(obj.audio)
+        audio.play()
+    })
 }
 
 function message_user(mes) {
@@ -64,7 +71,4 @@ function message_user(mes) {
 
 document.addEventListener("DOMContentLoaded", ()=>{
     message(json.messages[0])
-    document.getElementsByClassName("s-button")[0].addEventListener("click", () => {
-        audio.play()
-    })
 })

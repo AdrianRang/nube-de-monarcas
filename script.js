@@ -13,6 +13,32 @@ fetch('./responses.json')
     .catch(error => console.error('Error fetching JSON:', error));
 
 
+function message_simple(mes, path) {
+    const new_mes = document.getElementById("conversation").appendChild(document.createElement("div"));
+    new_mes.classList.add("full-message")
+    let sbutton = document.createElement("button");
+    sbutton.classList.add("s-button")
+    let hear = document.createElement("img")
+    hear.src = sound_icon;
+    hear.classList.add("sound")
+    sbutton.appendChild(hear);
+    const img = document.createElement("img")
+    img.src = machine_profile
+    img.className = "profile"
+    const new_message = document.createElement("div")
+    new_message.classList.add("message", "nube");
+    new_message.innerHTML = mes;
+
+    new_mes.appendChild(img)
+    new_mes.appendChild(new_message)
+    new_mes.appendChild(sbutton)
+
+    sbutton.addEventListener("click", () => {
+        const audio = new Audio(path)
+        audio.play()
+    })
+}
+
 function message(obj) {
     let mes = obj.message
     const new_mes = document.getElementById("conversation").appendChild(document.createElement("div"));
@@ -42,6 +68,9 @@ function message(obj) {
         button.onclick = () => {
             document.getElementById("response").innerHTML ="";
             message_user(element.option);
+            if(element.message != undefined) {
+                message_simple(element.message, element.audio);
+            }
             message(json.messages[element.sendTo])    
         }
         document.getElementById("response").appendChild(button)

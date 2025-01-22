@@ -23,22 +23,28 @@
             ]
         },
         {
-            "message": "Llamando a emergencias<br>Elige 1 para cancelar",
+            "message": "Se ha alertado a las autoridades de tu locación, presione el número tres si desea cancelar la llamada",
             "audio": "assets/neon.mp3",
             "responses": [
                 {
-                    "option": "1",
+                    "message": "Se a cancelado la llamada",
+                    "audio": "assets/neon.mp3",
+                    "option": "3",
                     "sendTo": "0"
                 }
             ]
         },
         {
-            "message": "Asesoramiento psicológico<br>Elige 1 para cancelar",
+            "message": "Escribe el número de tu tema de interés:<br>• Agendar una cita en un módulo presencial. Aparecerá un contacto al que puedes llamar y pedir informes: Presiona 1<br>• Recibir asesoriamiento online. Recibirás una liga de internet para redirigirte a fuentes oficiales: Presiona 2",
             "audio": "assets/neon.mp3",
             "responses": [
                 {
                     "option": "1",
-                    "sendTo": "0"
+                    "sendTo": "5"
+                },
+                {
+                    "option": "2",
+                    "sendTo": "6"
                 }
             ]
         },
@@ -53,7 +59,27 @@
             ]
         },
         {
-            "message": "Información general<br>Elige 1 para cancelar",
+            "message": "Puedes encontrar información general sobre la violencia contra las mujeres y sus modalidades en el siguiente link :<br><a href=\"https://www.gob.mx/conavim/articulos/que-es-la-violencia-contra-las-mujeres-y-sus-modalidades\">https://www.gob.mx/conavim/articulos/que-es-la-violencia-contra-las-mujeres-y-sus-modalidades</a>",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "Regresar",
+                    "sendTo": "0"
+                }
+            ]
+        },
+        {
+            "message": "Marque a la linea 075...",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "Regresar",
+                    "sendTo": "0"
+                }
+            ]
+        },
+        {
+            "message": "Aquí tienes la liga:<br><a href=\"https://www.smujerescoahuila.gob.mx/075-2/\">https://www.smujerescoahuila.gob.mx/075-2/</a>",
             "audio": "assets/neon.mp3",
             "responses": [
                 {

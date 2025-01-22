@@ -1,0 +1,66 @@
+{
+    "messages": [
+        {
+            "message": "¡Bienvenida! Somos Nube de Monarcas, estamos para ayudar. <br>Soy asesora virtual de la Secretaría de las Mujeres. <br>Para comenzar escribe el número que mejor corresponda con tu necesidad. <br>Es esencial para ofrecerte la atención correcta: <br>¿Cómo podemos ayudar? <br>• Ayuda inmediata: Presiona 1 <br>• Asesoramiento psicológico: Presiona 2 <br>• Asesoramiento legal: Presiona 3 <br>• Información general: Presiona 4 <br>",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "1",
+                    "sendTo": "1"
+                },
+                {
+                    "option": "2",
+                    "sendTo": "2"
+                },
+                {
+                    "option": "3",
+                    "sendTo": "3"
+                },
+                {
+                    "option": "4",
+                    "sendTo": "4"
+                }
+            ]
+        },
+        {
+            "message": "Llamando a emergencias<br>Elige 1 para cancelar",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "1",
+                    "sendTo": "0"
+                }
+            ]
+        },
+        {
+            "message": "Asesoramiento psicológico<br>Elige 1 para cancelar",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "1",
+                    "sendTo": "0"
+                }
+            ]
+        },
+        {
+            "message": "Asesoramiento legal<br>Elige 1 para cancelar",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "1",
+                    "sendTo": "0"
+                }
+            ]
+        },
+        {
+            "message": "Información general<br>Elige 1 para cancelar",
+            "audio": "assets/neon.mp3",
+            "responses": [
+                {
+                    "option": "1",
+                    "sendTo": "0"
+                }
+            ]
+        }
+    ]
+}

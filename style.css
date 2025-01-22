@@ -7,6 +7,20 @@ body {
     flex-direction: column;
 }
 
+#response {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#response > button {
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
 .message {
     border-radius: 20px;
     width: fit-content;
@@ -42,7 +56,7 @@ body {
     border-radius: 100%;
 }
 
-button {
+.s-button {
     width: fit-content;
     height: fit-content;
     background-color: #00000000;

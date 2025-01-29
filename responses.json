@@ -49,12 +49,16 @@
             ]
         },
         {
-            "message": "Asesoramiento legal<br>Elige 1 para cancelar",
+            "message": "Escribe el número de tu tema de interés:<br>• Agendar una cita en un módulo presencial. Aparecerá un contacto al que puedes llamar y pedir informes: Presiona 1<br>• Recibir asesoriamiento online. Recibirás una liga de internet para redirigirte a fuentes oficiales: Presiona 2",
             "audio": "assets/neon.mp3",
             "responses": [
                 {
                     "option": "1",
-                    "sendTo": "0"
+                    "sendTo": "5"
+                },
+                {
+                    "option": "2",
+                    "sendTo": "6"
                 }
             ]
         },
